@@ -55,7 +55,7 @@ public class DeliveryFeeController {
             @Parameter(description = "The type of vehicle used for delivery (Car, Scooter, Bike)", required = true, example = "Bike")
             @RequestParam("vehicleType") String vehicleType,
 
-            @Parameter(description = "Optional datetime to calculate fee for a specific time (ISO-8601 format)", required = false, example = "2026-03-20T10:46:00Z")
+            @Parameter(description = "Optional datetime to calculate fee for a specific time (ISO-8601 format)", required = false, example = "2026-01-01T10:00:00Z")
             @RequestParam(value = "datetime", required = false) Instant datetime) {
 
         City parsedCity = City.fromString(city);
